@@ -46,7 +46,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           },
           {
             text: 'Apple AR Sessions',
-            link: 'https://www.craft.do/s/ak33xgy7wXsEml',
+            link: '/apple-ar/apple-ar-sessions/',
           },
           {
             text: 'Apple AR Documents',
