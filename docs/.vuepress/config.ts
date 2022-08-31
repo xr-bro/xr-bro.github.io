@@ -18,11 +18,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: "XR Bro's Club",
+      title: "XR Bro's Space",
       description: '来，我们一起看看XR的未来吧！',
     }
   },
-  // base: '/', // 默认'/'。如果你想将你的网站部署到如 https://foo.github.io/bar/，那么 base 应该被设置成 "/bar/",（否则页面将失去样式等文件）
 
   // 主题配置
   themeConfig: {
@@ -35,15 +34,23 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
           {
             text: 'Apple AR 圣经',
-            items: [
-
-            ],
+            link: '/apple-ar/apple-ar-bible/',
+          },
+          {
+            text: 'AR 人机交互指南(HIG)',
+            link: '/apple-ar/ar-hig/',
+          },
+          {
+            text: 'Apple AR Digital Lounge',
+            link: '/apple-ar/apple-ar-digital-lounge/',
           },
           {
             text: 'Apple AR Sessions',
-            items: [
-
-            ],
+            link: 'https://www.craft.do/s/ak33xgy7wXsEml',
+          },
+          {
+            text: 'Apple AR Documents',
+            link: '/apple-ar/apple-ar-documents/',
           },
         ],
       },
@@ -57,11 +64,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     logo: '/img/logo.png', // 导航栏logo
     repo: 'xr-bro', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
-    lastUpdated: '上次更新', // 开启更新时间，并配置前缀文字   string | boolean (取值为git提交时间)
     docsDir: 'docs', // 编辑的文件夹
-    // docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
-    editLinks: true, // 启用编辑
+    docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
+    editLinks: false, // 启用编辑
     editLinkText: '编辑',
+    sidebarOpen: false, // 初始状态是否打开侧边栏
 
     //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
 
@@ -91,7 +98,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     //   moreArticle: '/archives' // “更多文章”跳转的页面，默认'/archives'
     // },
     // rightMenuBar: false, // 是否显示右侧文章大纲栏，默认true (屏宽小于1300px下无论如何都不显示)
-    // sidebarOpen: false, // 初始状态是否打开左侧边栏，默认true
     // pageButton: false, // 是否显示快捷翻页按钮，默认true
 
     // 默认外观模式（用户未在页面手动修改过模式时才生效，否则以用户设置的模式为准），可选：'auto' | 'light' | 'dark' | 'read'，默认'auto'。
@@ -104,13 +110,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     author: {
       name: 'xr-bro', // 必需
       link: 'https://github.com/xr-bro', // 可选的
-    },
-
-    // 博主信息 (显示在首页侧边栏)
-    blogger: {
-      avatar: 'https://avatars.githubusercontent.com/u/107762168?s=200&v=4',
-      name: 'XR Bro',
-      slogan: '来，一起看看 XR 的未来',
     },
 
     // 社交图标 (显示于博主信息栏和页脚栏。内置图标：https://doc.xugaoyi.com/pages/a20ce8/#social)
@@ -134,7 +133,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     footer: {
       createYear: 2022, // 博客创建年份
       copyrightInfo:
-        'Evan Xu | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
+        'XR Bro | <a href="https://github.com/xugaoyi/vuepress-theme-vdoing/blob/master/LICENSE" target="_blank">MIT License</a>', // 博客版权信息、备案信息等，支持a标签或换行标签</br>
     },
 
     // 扩展自动生成frontmatter。（当md文件的frontmatter不存在相应的字段时将自动添加。不会覆盖已有的数据。）
@@ -262,9 +261,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         options: {
           clientID: 'a6e1355287947096b88b',
           clientSecret: 'f0e77d070fabfcd5af95bebb82b2d574d7248d71',
-          repo: 'blog-gitalk-comment', // GitHub 仓库
-          owner: 'xugaoyi', // GitHub仓库所有者
-          admin: ['xugaoyi'], // 对仓库有写权限的人
+          repo: 'gitalk-comment', // GitHub 仓库
+          owner: 'xr-bro', // GitHub仓库所有者
+          admin: ['OneeMe'], // 对仓库有写权限的人
           // distractionFreeMode: true,
           pagerDirection: 'last', // 'first'正序 | 'last'倒序
           id: '<%- (frontmatter.permalink || frontmatter.to.path).slice(-16) %>', //  页面的唯一标识,长度不能超过50
@@ -274,15 +273,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             '页面：<%- window.location.origin + (frontmatter.to.path || window.location.pathname) %>', // GitHub issue 的内容
         },
       },
-    ],
-    [
-      '@vuepress/last-updated', // "上次更新"时间格式
-      {
-        transformer: (timestamp, lang) => {
-          return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
-        },
-      },
-    ],
+    ]
   ],
 
   markdown: {
