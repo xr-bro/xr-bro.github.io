@@ -4,7 +4,7 @@
       <img id="craft" src="/img/craft.webp" alt="">
     </div>
     <!-- 3.6rem 是 nav bar 的高度 -->
-    <iframe :src="url" style="position:fixed; top:3.6rem; left:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
+    <iframe :src="url" style="position:fixed; top:3.6rem; left:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:18;"></iframe>
   </div>
 </template>
 <script>
@@ -29,7 +29,7 @@ export default {
   height:100%;
   border:none;
   margin:0;
-  padding:0; z-index:999998;
+  padding:0; z-index:17;
 
   display: flex;
   justify-content: center;

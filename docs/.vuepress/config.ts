@@ -60,7 +60,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         items: [],
       }
     ],
-    sidebarDepth: 2, // 侧边栏显示深度，默认1，最大2（显示到h3标题）
     logo: '/img/logo.png', // 导航栏logo
     repo: 'xr-bro', // 导航栏右侧生成Github链接
     searchMaxSuggestions: 10, // 搜索结果显示最大数
@@ -68,7 +67,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
     editLinks: false, // 启用编辑
     editLinkText: '编辑',
-    sidebarOpen: false, // 初始状态是否打开侧边栏
 
     //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
 
@@ -102,9 +100,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 
     // 默认外观模式（用户未在页面手动修改过模式时才生效，否则以用户设置的模式为准），可选：'auto' | 'light' | 'dark' | 'read'，默认'auto'。
     // defaultMode: 'auto',
-
-    // 侧边栏  'structuring' | { mode: 'structuring', collapsable: Boolean} | 'auto' | <自定义>    温馨提示：目录页数据依赖于结构化的侧边栏数据，如果你不设置为'structuring',将无法使用目录页
-    sidebar: 'structuring',
 
     // 文章默认的作者信息，(可在md文件中单独配置此信息) string | {name: string, link?: string}
     author: {
