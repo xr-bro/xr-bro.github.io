@@ -40,4 +40,10 @@ export default {
   width: 27px;
   height: 27px;
 }
+
+@media (prefers-color-scheme: dark) {
+  #background {
+    background: var(--blurBg);
+  }
+}
 </style>

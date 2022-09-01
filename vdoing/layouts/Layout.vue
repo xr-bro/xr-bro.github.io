@@ -47,6 +47,11 @@
     <!-- 归档页 -->
     <ArchivesPage v-else-if="$page.frontmatter.archivesPage" />
 
+    <!-- 空白页 -->
+    <div v-else-if="showOnlyNav">
+      <Content/>
+    </div>
+
     <!-- 文章页或其他页 -->
     <Page v-else :sidebar-items="sidebarItems">
       <template #top v-if="pageSlotTop">
@@ -65,7 +70,7 @@
       /> -->
     </Page>
 
-    <Footer />
+    <Footer v-if="!showOnlyNav" />
 
     <Buttons ref="buttons" @toggle-theme-mode="toggleThemeMode" />
 
@@ -154,6 +159,9 @@ export default {
         && headers.length
         && this.$frontmatter.sidebar !== false
       )
+    },
+    showOnlyNav() {
+      return !!this.$page.frontmatter.only_nav
     },
     shouldShowNavbar() {
       const { themeConfig } = this.$site
