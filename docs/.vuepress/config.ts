@@ -57,6 +57,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         text: 'XR 周报',
         link: '/xr-week-report/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
         items: [],
+      },
+      {
+        text: '关于',
+        link: '/about/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
+        items: [],
       }
     ],
     logo: '/img/logo.png', // 导航栏logo
