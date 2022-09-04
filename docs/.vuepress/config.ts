@@ -39,25 +39,25 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
             text: 'AR 人机交互指南(HIG)',
             link: '/apple-ar/ar-hig/',
           },
-          {
-            text: 'Apple AR Digital Lounge',
-            link: '/apple-ar/apple-ar-digital-lounge/',
-          },
+          // {
+          //   text: 'Apple AR Digital Lounge',
+          //   link: '/apple-ar/apple-ar-digital-lounge/',
+          // },
           {
             text: 'Apple AR Sessions',
             link: '/apple-ar/apple-ar-sessions/',
           },
-          {
-            text: 'Apple AR Documents',
-            link: '/apple-ar/apple-ar-documents/',
-          },
+          // {
+          //   text: 'Apple AR Documents',
+          //   link: '/apple-ar/apple-ar-documents/',
+          // },
         ],
       },
-      {
-        text: 'XR 周报',
-        link: '/xr-week-report/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
-        items: [],
-      },
+      // {
+      //   text: 'XR 周报',
+      //   link: '/xr-week-report/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
+      //   items: [],
+      // },
       {
         text: '关于',
         link: '/about/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
@@ -197,21 +197,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       {
         thirdparty: [
           {
-            title: '在MDN中搜索',
-            frontUrl: 'https://developer.mozilla.org/zh-CN/search?q=', // 搜索链接的前面部分
-            behindUrl: '', // 搜索链接的后面部分，可选，默认 ''
-          },
-          {
-            title: '在Runoob中搜索',
-            frontUrl: 'https://www.runoob.com/?s=',
-          },
-          {
-            title: '在Vue API中搜索',
-            frontUrl: 'https://cn.vuejs.org/v2/api/#',
-          },
-          {
-            title: '在Bing中搜索',
-            frontUrl: 'https://cn.bing.com/search?q=',
+            title: '在 Google 中搜索',
+            frontUrl: 'https://google.com/search?q=',
           },
           {
             title: '通过百度搜索本站的',
