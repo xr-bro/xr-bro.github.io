@@ -1,20 +1,16 @@
 ---
 home: true
 heroImage: /img/logo.png
-heroText: XR-Bro's Space
-tagline: 来，我们一起看看未来
-comment: false
-actionText: 立刻进入 →
-# actionLink: /web/
-# bannerBg: auto # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
+heroText: XR-Bro's Club
+tagline: 我们是一群热爱 XR 的人，我们在这里分享我们对 XR 创作的见解和经验。
+actionText: 关于我们
+actionLink: /about/
 
 features:
   - title: Apple AR
+    details: 关于Apple AR 的各种参考资料，适合想使用 Swift 直接在 Apple 生态进行开发的客户端开发者。
     link: /apple-ar/ # 可选
     imgUrl: /img/arkit.png # 可选
-  - title: XR 周报
-    link: /xr-week-report/
-    imgUrl: /img/ui.png
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 postList: none

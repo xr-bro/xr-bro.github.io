@@ -17,7 +17,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
   locales: {
     '/': {
       lang: 'zh-CN',
-      title: "XR Bro's Space",
+      title: "XR Bro's Club",
       description: '来，我们一起看看XR的未来吧！',
     }
   },
