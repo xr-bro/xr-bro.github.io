@@ -27,51 +27,22 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 导航配置
     nav: [
       {
-        text: 'Apple AR',
-        link: '/apple-ar/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
-        items: [
-          // 说明：以下所有link的值只是在相应md文件头部定义的永久链接（不是什么特殊编码）。另外，注意结尾是有斜杠的
-          {
-            text: 'Apple AR 圣经',
-            link: '/apple-ar/apple-ar-bible/',
-          },
-          {
-            text: 'AR 人机交互指南(HIG)',
-            link: '/apple-ar/ar-hig/',
-          },
-          // {
-          //   text: 'Apple AR Digital Lounge',
-          //   link: '/apple-ar/apple-ar-digital-lounge/',
-          // },
-          {
-            text: 'Apple AR Sessions',
-            link: '/apple-ar/apple-ar-sessions/',
-          },
-          // {
-          //   text: 'Apple AR Documents',
-          //   link: '/apple-ar/apple-ar-documents/',
-          // },
-        ],
+        text: 'FAQ',
+        link: '/faq/',
       },
-      // {
-      //   text: 'XR 周报',
-      //   link: '/xr-week-report/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
-      //   items: [],
-      // },
       {
-        text: '关于',
-        link: '/about/', //目录页链接，此处link是vdoing主题新增的配置项，有二级导航时，可以点击一级导航跳到目录页
-        items: [],
-      }
+        text: '关于我们',
+        link: '/about/',
+      },
     ],
     logo: '/img/logo.png', // 导航栏logo
     repo: 'xr-bro', // 导航栏右侧生成Github链接
-    searchMaxSuggestions: 10, // 搜索结果显示最大数
+    // searchMaxSuggestions: 10, // 搜索结果显示最大数
     docsDir: 'docs', // 编辑的文件夹
     docsBranch: 'master', // 编辑的文件所在分支，默认master。 注意：如果你的分支是main则修改为main
     editLinks: false, // 启用编辑
     editLinkText: '编辑',
-
+    search: false,
     //*** 以下是Vdoing主题相关配置，文档：https://doc.xugaoyi.com/pages/a20ce8/ ***//
 
     // category: false, // 是否打开分类功能，默认true
@@ -192,21 +163,21 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 'fulltext-search',
 
     // 可以添加第三方搜索链接的搜索框（继承原官方搜索框的配置参数）
-    [
-      'thirdparty-search',
-      {
-        thirdparty: [
-          {
-            title: '在 Google 中搜索',
-            frontUrl: 'https://google.com/search?q=',
-          },
-          {
-            title: '通过百度搜索本站的',
-            frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
-          },
-        ],
-      }
-    ],
+    // [
+    //   'thirdparty-search',
+    //   {
+    //     thirdparty: [
+    //       {
+    //         title: '在 Google 中搜索',
+    //         frontUrl: 'https://google.com/search?q=',
+    //       },
+    //       {
+    //         title: '通过百度搜索本站的',
+    //         frontUrl: `https://www.baidu.com/s?wd=site%3A${DOMAIN_NAME}%20`,
+    //       },
+    //     ],
+    //   }
+    // ],
 
     [
       'one-click-copy', // 代码块复制按钮

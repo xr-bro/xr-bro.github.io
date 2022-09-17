@@ -7,10 +7,21 @@ actionText: 关于我们
 actionLink: /about/
 
 features:
-  - title: Apple AR
-    details: 关于Apple AR 的各种参考资料，适合想使用 Swift 直接在 Apple 生态进行开发的客户端开发者。
-    link: /apple-ar/ # 可选
-    # imgUrl: /img/arkit.png # 可选
+  - title: Apple AR 圣经
+    details: 从 iOS 开发者的视角帮助你理解 Apple AR 相关框架整体脉络和使用方法。
+    link: /apple-ar/apple-ar-bible/
+    imgUrl: /img/dark_sunglasses.png
+  - title: AR 人机交互指南(HIG)
+    details: 整理了 Apple AR 相关的人机交互指南，帮助你更好地设计和开发 AR 体验。
+    link: /apple-ar/ar-hig/
+    imgUrl: /img/raised_hands.png
+  # - title: Apple AR Digital Lounge
+  #   details: 关于Apple AR 的各种参考资料，适合想使用 Swift 直接在 Apple 生态进行开发的客户端开发者。
+  #   link: /apple-ar/apple-ar-digital-lounge/
+  - title: Apple AR Sessions
+    details: 苹果历年关于 AR 的 WWDC Session 汇总，帮助你更好地理解 Apple AR 的发展历程。
+    link: /apple-ar/apple-ar-sessions/
+    imgUrl: /img/apple.png
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 postList: none
