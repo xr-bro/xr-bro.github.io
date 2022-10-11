@@ -7,19 +7,18 @@ actionText: 关于我们
 actionLink: /about/
 
 features:
-  - title: Apple AR 圣经
+  - title: Apple AR 圣经（施工🚧中）
     details: 从 iOS 开发者的视角帮助你理解 Apple AR 相关框架整体脉络和使用方法。
-    link: /apple-ar/apple-ar-bible/
     imgUrl: /img/dark_sunglasses.png
   - title: AR 人机交互指南(HIG)
-    details: 整理了 Apple AR 相关的人机交互指南，帮助你更好地设计和开发 AR 体验。
+    details: 翻译好的 Apple AR 相关的人机交互指南，帮助你更好地了解如何提升 AR App 交互体验。
     link: /apple-ar/ar-hig/
     imgUrl: /img/raised_hands.png
   # - title: Apple AR Digital Lounge
   #   details: 关于Apple AR 的各种参考资料，适合想使用 Swift 直接在 Apple 生态进行开发的客户端开发者。
   #   link: /apple-ar/apple-ar-digital-lounge/
-  - title: Apple AR Sessions
-    details: 苹果历年关于 AR 的 WWDC Session 汇总，帮助你更好地理解 Apple AR 的发展历程。
+  - title: Apple AR 资料中文伴读
+    details: Apple WWDC 和 Tech Talk 相关的中文资料解读。
     link: /apple-ar/apple-ar-sessions/
     imgUrl: /img/apple.png
 
