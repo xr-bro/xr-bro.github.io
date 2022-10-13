@@ -34,6 +34,9 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         text: '关于我们',
         link: '/about/',
       },
+      {
+        text: 'XR 交流区（施工🚧中）',
+      },
     ],
     logo: '/img/logo.png', // 导航栏logo
     repo: 'xr-bro', // 导航栏右侧生成Github链接
