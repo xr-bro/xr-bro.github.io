@@ -17,10 +17,6 @@ features:
   # - title: Apple AR Digital Lounge
   #   details: 关于Apple AR 的各种参考资料，适合想使用 Swift 直接在 Apple 生态进行开发的客户端开发者。
   #   link: /apple-ar/apple-ar-digital-lounge/
-  - title: Apple AR 资料中文伴读
-    details: Apple WWDC 和 Tech Talk 相关的中文资料解读。
-    link: /apple-ar/apple-ar-sessions/
-    imgUrl: /img/apple.png
 
 # 文章列表显示方式: detailed 默认，显示详细版文章列表（包括作者、分类、标签、摘要、分页等）| simple => 显示简约版文章列表（仅标题和日期）| none 不显示文章列表
 postList: none
