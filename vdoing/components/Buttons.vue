@@ -1,46 +1,11 @@
 <template>
   <div class="buttons">
     <transition name="fade">
-      <div
-        title="返回顶部"
-        class="button blur go-to-top iconfont icon-fanhuidingbu"
-        v-show="showToTop"
-        @click="scrollToTop"
-      />
+      <div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" v-show="showToTop"
+        @click="scrollToTop" />
     </transition>
-    <div
-      title="去评论"
-      class="button blur go-to-comment iconfont icon-pinglun"
-      v-show="showCommentBut"
-      @click="scrollToComment"
-    />
-    <div
-      title="主题模式"
-      class="button blur theme-mode-but iconfont icon-zhuti"
-      @mouseenter="showModeBox = true"
-      @mouseleave="showModeBox = false"
-      @click="showModeBox = true"
-    >
-      <transition name="mode">
-        <ul
-          class="select-box"
-          ref="modeBox"
-          v-show="showModeBox"
-          @click.stop
-          @touchstart.stop
-        >
-          <li
-            v-for="item in modeList"
-            :key="item.KEY"
-            class="iconfont"
-            :class="[item.icon, { active: item.KEY === currentMode }]"
-            @click="toggleMode(item.KEY)"
-          >
-            {{ item.name }}
-          </li>
-        </ul>
-      </transition>
-    </div>
+    <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" v-show="showCommentBut"
+      @click="scrollToComment" />
   </div>
 </template>
 
@@ -50,7 +15,7 @@ import storage from 'good-storage' // 本地存储
 const MOBILE_DESKTOP_BREAKPOINT = 719 // refer to config.styl
 
 export default {
-  data () {
+  data() {
     return {
       threshold: 100,
       scrollTop: null,
@@ -88,8 +53,8 @@ export default {
       COMMENT_SELECTOR_3: '.vssue' // 评论区元素的选择器3
     }
   },
-  mounted () {
-    this.currentMode = storage.get('mode') ||  this.$themeConfig.defaultMode ||'auto'
+  mounted() {
+    this.currentMode = storage.get('mode') || this.$themeConfig.defaultMode || 'auto'
     this.scrollTop = this.getScrollTop()
     window.addEventListener('scroll', debounce(() => {
       this.scrollTop = this.getScrollTop()
@@ -129,27 +94,27 @@ export default {
 
   },
   computed: {
-    showToTop () {
+    showToTop() {
       return this.scrollTop > this.threshold
     }
   },
   methods: {
-    toggleMode (key) {
+    toggleMode(key) {
       this.currentMode = key
       this.$emit('toggle-theme-mode', key)
     },
-    getScrollTop () {
+    getScrollTop() {
       return window.pageYOffset
         || document.documentElement.scrollTop
         || document.body.scrollTop || 0
     },
 
-    scrollToTop () {
+    scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' })
       this.scrollTop = 0
     },
 
-    getCommentTop () {
+    getCommentTop() {
       setTimeout(() => {
         let commentEl = document.querySelector(this.COMMENT_SELECTOR_1) || document.querySelector(this.COMMENT_SELECTOR_2) || document.querySelector(this.COMMENT_SELECTOR_3)
         if (commentEl) {
@@ -160,7 +125,7 @@ export default {
     },
 
 
-    scrollToComment () {
+    scrollToComment() {
       window.scrollTo({ top: this.commentTop, behavior: 'smooth' })
       this._textareaEl = document.querySelector(this.COMMENT_SELECTOR_1 + ' textarea') || document.querySelector(this.COMMENT_SELECTOR_2 + ' input') || document.querySelector(this.COMMENT_SELECTOR_3 + ' textarea')
       if (this._textareaEl && this.getScrollTop() !== this._recordScrollTop) {
@@ -170,7 +135,7 @@ export default {
       }
     },
 
-    _handleListener () {
+    _handleListener() {
       clearTimeout(this._scrollTimer)
       this._scrollTimer = setTimeout(() => {
         document.removeEventListener('scroll', this._handleListener)
@@ -179,7 +144,7 @@ export default {
       }, 30)
     },
 
-    _handleFocus () {
+    _handleFocus() {
       this._textareaEl.focus()
       this._textareaEl.classList.add('yellowBorder')
       setTimeout(() => {
@@ -188,7 +153,7 @@ export default {
     }
   },
   watch: {
-    '$route.path' () {
+    '$route.path'() {
       this.showCommentBut = false
       this.getCommentTop()
     }
