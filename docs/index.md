@@ -9,10 +9,10 @@ actionLink: /about/
 features:
   - title: 微信公众号
     imgUrl: /img/weixin_logo.png
-    link: /img/weixin_qr.jpg
+    link: /weixin
   - title: 交流社区
-    link: /kook/
-    imgUrl: /img/raised_hands.png
+    link: /kook
+    imgUrl: /img/kook_logo.png
   # - title: Apple AR Digital Lounge
   #   details: 关于Apple AR 的各种参考资料，适合想使用 Swift 直接在 Apple 生态进行开发的客户端开发者。
   #   link: /apple-ar/apple-ar-digital-lounge/
