@@ -27,15 +27,8 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     // 导航配置
     nav: [
       {
-        text: 'FAQ',
-        link: '/faq/',
-      },
-      {
         text: '关于我们',
         link: '/about/',
-      },
-      {
-        text: 'XR 交流区（施工🚧中）',
       },
     ],
     logo: '/img/logo.png', // 导航栏logo
@@ -87,6 +80,11 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     social: {
       // iconfontCssFile: '//at.alicdn.com/t/xxx.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自己添加。阿里图片库：https://www.iconfont.cn/
       icons: [
+        {
+          iconClass: 'icon-weixin',
+          title: '公众号',
+          link: '/img/weixin_qr.jpg',
+        },
         {
           iconClass: 'icon-youjian',
           title: '发邮件',

@@ -7,12 +7,11 @@ actionText: 关于我们
 actionLink: /about/
 
 features:
-  - title: Apple AR 圣经（施工🚧中）
-    details: 从 iOS 开发者的视角帮助你理解 Apple AR 相关框架整体脉络和使用方法。
-    imgUrl: /img/dark_sunglasses.png
-  - title: AR 人机交互指南(HIG)
-    details: 翻译好的 Apple AR 相关的人机交互指南，帮助你更好地了解如何提升 AR App 交互体验。
-    link: /apple-ar/ar-hig/
+  - title: 微信公众号
+    imgUrl: /img/weixin_logo.png
+    link: /img/weixin_qr.jpg
+  - title: 交流社区
+    link: /kook/
     imgUrl: /img/raised_hands.png
   # - title: Apple AR Digital Lounge
   #   details: 关于Apple AR 的各种参考资料，适合想使用 Swift 直接在 Apple 生态进行开发的客户端开发者。
